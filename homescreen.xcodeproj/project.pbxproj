@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		764F1F1E2FBAA994001EA437 /* DeviceSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */; };
+		76D90F0E2FBAEEDD0010C947 /* ProfileUserComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */; };
 		E405B9062FB95A62003BEAA3 /* BankingServiceExtraChildComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */; };
 		E4C906B02FB803BA007BDF84 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906AF2FB803BA007BDF84 /* Color + Extension.swift */; };
 		E4C906B22FB80410007BDF84 /* homescreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906B12FB80410007BDF84 /* homescreenApp.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSafeArea.swift; sourceTree = "<group>"; };
+		76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserComponent.swift; sourceTree = "<group>"; };
 		E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingServiceExtraChildComponent.swift; sourceTree = "<group>"; };
 		E4C906792FB7F560007BDF84 /* homescreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homescreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C906862FB7F562007BDF84 /* homescreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homescreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +132,7 @@
 		E4C906EB2FB806C8007BDF84 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */,
 				E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */,
 				E4C911F22FB8C06400293195 /* FrequentlyUsedComponent.swift */,
 				E4C906FC2FB8571F007BDF84 /* TabBarChildComponent.swift */,
@@ -301,6 +304,7 @@
 				E4C911F32FB8C06B00293195 /* FrequentlyUsedComponent.swift in Sources */,
 				E405B9062FB95A62003BEAA3 /* BankingServiceExtraChildComponent.swift in Sources */,
 				E4C906F12FB83518007BDF84 /* StatusComponent.swift in Sources */,
+				76D90F0E2FBAEEDD0010C947 /* ProfileUserComponent.swift in Sources */,
 				E4C906FB2FB85628007BDF84 /* TabBarComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,7 +468,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XMG9C3LK4N;
+				DEVELOPMENT_TEAM = S92Y757QCB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -472,12 +476,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sreng.homescreen;
+				PRODUCT_BUNDLE_IDENTIFIER = cm.homescreen.cmcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -498,7 +503,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XMG9C3LK4N;
+				DEVELOPMENT_TEAM = S92Y757QCB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -506,12 +511,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Sreng.homescreen;
+				PRODUCT_BUNDLE_IDENTIFIER = cm.homescreen.cmcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;

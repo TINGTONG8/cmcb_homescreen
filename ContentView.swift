@@ -8,124 +8,125 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var scrollOffsetY: CGFloat = 0
+    @State private var scrollAnchorY: CGFloat? = nil
+    @State private var topSafeArea: CGFloat = 0
+
     var body: some View {
         SafeAreaReader { insets, deviceType in
             ZStack {
                 Color.primaryColor.ignoresSafeArea()
-                
-                // CMCB Building
+
                 HStack {
                     Spacer()
                     Image("ic_cmcb_bg")
                         .resizable()
                         .frame(width: 300, height: 800)
                 }
-                
-                // Content
-                VStack {
-                    // Header
+
+                VStack(spacing: 0) {
                     HStack(spacing: 15) {
                         Spacer()
-                        Button {
-                            print("notification tapped")
-                        } label: {
+                        Button { } label: {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(Color.whiteColor).opacity(0.2)
                                     .frame(width: 40, height: 40)
-                                
                                 Image("ic_notification")
                                     .resizable()
                                     .frame(width: 23, height: 25)
-                                
                                 Image("ic_notification_alert")
                                     .resizable()
                                     .frame(width: 10, height: 10)
                                     .offset(x: 7, y: -7)
                             }
                         }
-                        Button {
-                            print("notification tapped")
-                        } label: {
+                        Button { } label: {
                             Image("ic_nbc")
                                 .resizable()
                                 .frame(width: 40, height: 40)
                         }
                     }
-                    
+                    .padding(.bottom, 8)
+
                     ScrollView(.vertical, showsIndicators: false) {
-                        //User Header
-                        HStack(spacing: 15) {
-                            Image("ic_nbc")
-                                .resizable()
-                                .frame(width: 45, height: 45)
-                            VStack(alignment: .leading) {
-                                Text("La Seavyong")
-                                    .font(.system(size: 18, weight: .bold))
-                                    .foregroundColor(.whiteColor)
-                                    .padding(.bottom, 3)
-                                
-                                Text("Member since '21")
-                                    .font(.system(size: 15, weight: .medium))
-                                    .foregroundColor(.whiteColor).opacity(0.7)
-                            }
-                            Spacer()
+                        VStack(spacing: 0) {
+                            Spacer().frame(height: 60)
+
+                            QuickBankingComponent(
+                                items: [
+                                    ItemModel(icon: "ic_plus", title: "Quick Banking"),
+                                    ItemModel(icon: "", title: "Accounts"),
+                                    ItemModel(icon: "", title: "Transfers"),
+                                    ItemModel(icon: "", title: "Loan"),
+                                    ItemModel(icon: "", title: "Cards"),
+                                ]
+                            )
+                            .padding(.vertical, 12)
+
+                            UserAccountBannerComponent()
+
+                            BankingServiceComponent(
+                                title: "Banking Service",
+                                bgColor: Color.black,
+                                items: [
+                                    ItemModel(icon: "ic_accounts", title: "Accounts"),
+                                    ItemModel(icon: "ic_payments", title: "Payments"),
+                                    ItemModel(icon: "ic_transfers", title: "Transfers"),
+                                    ItemModel(icon: "ic_loan", title: "Loan"),
+                                    ItemModel(icon: "ic_cards", title: "Cards"),
+                                    ItemModel(icon: "ic_favorites", title: "Favorites"),
+                                ],
+                                extraItems: [
+                                    ItemModel(icon: "ic_schedule", title: "Schedule"),
+                                    ItemModel(icon: "ic_exchange_rate", title: "Exchange Rate"),
+                                    ItemModel(icon: "ic_locator", title: "Locator"),
+                                ]
+                            )
+                            .padding(.vertical, 12)
+
+                            FrequentlyUsedComponent(
+                                items: [
+                                    ItemModel(icon: "ic_accounts", title: "Accounts"),
+                                    ItemModel(icon: "ic_payments", title: "Payments"),
+                                    ItemModel(icon: "ic_transfers", title: "Transfers"),
+                                    ItemModel(icon: "ic_loan", title: "Loan"),
+                                    ItemModel(icon: "ic_cards", title: "Cards"),
+                                    ItemModel(icon: "ic_favorites", title: "Favorites"),
+                                ]
+                            )
+
+                            Spacer().frame(height: 110 + deviceType.extraBottomPadding)
                         }
-                        
-                        //Quick Banking
-                        QuickBankingComponent(
-                            items: [
-                                ItemModel(icon: "ic_plus", title: "Quick Banking"),
-                                ItemModel(icon: "", title: "Accounts"),
-                                ItemModel(icon: "", title: "Transfers"),
-                                ItemModel(icon: "", title: "Loan"),
-                                ItemModel(icon: "", title: "Cards"),
-                            ]
+                        .background(
+                            GeometryReader { geo -> Color in
+                                let minY = geo.frame(in: .global).minY
+                                DispatchQueue.main.async {
+                                    if scrollAnchorY == nil {
+                                        scrollAnchorY = minY
+                                    }
+                                    scrollOffsetY = minY - (scrollAnchorY ?? minY)
+                                }
+                                return Color.clear
+                            }
                         )
-                        .padding(.vertical, 12)
-                        
-                        UserAccountBannerComponent()
-                        
-                        //Banking Service
-                        BankingServiceComponent(
-                            title: "Banking Service",
-                            bgColor: Color.black,
-                            items: [
-                                ItemModel(icon: "ic_accounts", title: "Accounts"),
-                                ItemModel(icon: "ic_payments", title: "Payments"),
-                                ItemModel(icon: "ic_transfers", title: "Transfers"),
-                                ItemModel(icon: "ic_loan", title: "Loan"),
-                                ItemModel(icon: "ic_cards", title: "Cards"),
-                                ItemModel(icon: "ic_favorites", title: "Favorites"),
-                            ],
-                            extraItems: [
-                                ItemModel(icon: "ic_schedule", title: "Schedule"),
-                                ItemModel(icon: "ic_exchange_rate", title: "Exchange Rate"),
-                                ItemModel(icon: "ic_locator", title: "Locator"),
-                            ]
-                        )
-                        .padding(.vertical, 12)
-                        
-                        FrequentlyUsedComponent(
-                            items: [
-                                ItemModel(icon: "ic_accounts", title: "Accounts"),
-                                ItemModel(icon: "ic_payments", title: "Payments"),
-                                ItemModel(icon: "ic_transfers", title: "Transfers"),
-                                ItemModel(icon: "ic_loan", title: "Loan"),
-                                ItemModel(icon: "ic_cards", title: "Cards"),
-                                ItemModel(icon: "ic_favorites", title: "Favorites"),
-                            ]
-                        )
-                        
-                        Spacer().frame(height: 110 + deviceType.extraBottomPadding)
                     }
+                    .overlay(
+                        ProfileUserComponent(
+                            topSafeArea: topSafeArea,
+                            offsetY: $scrollOffsetY
+                        ),
+                        alignment: .topLeading
+                    )
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                 .padding(.horizontal, 15)
                 .padding(.top, insets.top + deviceType.extraTopPadding)
                 .ignoresSafeArea()
-                
-                // TabBar
+                .onAppear {
+                    topSafeArea = insets.top
+                }
+
                 TabBarComponent(
                     items: [
                         ItemModel(icon: "ic_cmcb", title: "Account"),
@@ -137,7 +138,8 @@ struct ContentView: View {
                 )
                 .padding(.bottom, deviceType.extraBottomPadding)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                .ignoresSafeArea(.all, edges: .bottom)            }
+                .ignoresSafeArea(.all, edges: .bottom)
+            }
         }
     }
 }

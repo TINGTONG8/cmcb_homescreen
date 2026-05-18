@@ -16,14 +16,14 @@ struct TabBarComponent: View {
                         Rectangle()
                                 .fill(Color.tabBarColor)
                                 .frame(maxWidth: .infinity, maxHeight: 90)
-                                .overlay {
+                                .overlay (
                                         HStack(spacing: 0) {
                                                 ForEach(items) { item in
                                                         TabBarChildComponent(icon: item.icon, title: item.title)
                                                                 .frame(maxWidth: .infinity)
                                                 }
                                         }
-                                }
+                                )
                         
                         ZStack {
                                 RoundedRectangle(cornerRadius: 35)
