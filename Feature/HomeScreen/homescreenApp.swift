@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  homescreenApp.swift
 //  homescreen
 //
 //  Created by Srun Kheangsreng on 16/5/26.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct homescreenApp: View {
     @State private var scrollOffsetY: CGFloat = 0
     @State private var scrollAnchorY: CGFloat? = nil
     @State private var topSafeArea: CGFloat = 0
@@ -27,7 +27,9 @@ struct ContentView: View {
                 VStack(spacing: 0) {
                     HStack(spacing: 15) {
                         Spacer()
-                        Button { } label: {
+                        Button {
+                            Navigator.shared.push(to: homescreenApp())
+                        } label: {
                             ZStack {
                                 RoundedRectangle(cornerRadius: 16)
                                     .fill(Color.whiteColor).opacity(0.2)
@@ -145,5 +147,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    homescreenApp()
 }
