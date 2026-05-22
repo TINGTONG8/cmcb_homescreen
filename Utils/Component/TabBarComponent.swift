@@ -13,13 +13,30 @@ struct TabBarComponent: View {
     var scanAction: (() -> Void)? = nil
     
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(Color.tabBarColor)
-                .frame(maxWidth: .infinity, maxHeight: 90)
-                .overlay(
-                    HStack(spacing: 0) {
-                        ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
+        Rectangle()
+            .fill(Color.tabBarColor)
+            .frame(maxWidth: .infinity, maxHeight: 90)
+            .overlay(
+                HStack(spacing: 0) {
+                    ForEach(Array(items.enumerated()), id: \.element.id) { index, item in
+                        if item.icon.isEmpty && item.title.isEmpty {
+                            Button {
+                                scanAction?()
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 35)
+                                        .fill(Color.tabBarColor)
+                                        .frame(width: 85, height: 85)
+                                    Image("ic_scan")
+                                        .resizable()
+                                        .frame(width: 65, height: 65)
+                                }
+                            }
+                            .buttonStyle(.plain)
+                            .offset(y: -25)
+                            .frame(maxWidth: .infinity)
+                        } else {
+                            // Regular tab buttons
                             Button {
                                 selectedTab = index
                             } label: {
@@ -33,21 +50,8 @@ struct TabBarComponent: View {
                             .buttonStyle(.plain)
                         }
                     }
-                )
-
-            ZStack {
-                RoundedRectangle(cornerRadius: 35)
-                    .fill(Color.tabBarColor)
-                    .frame(width: 85, height: 85)
-                Image("ic_scan")
-                    .resizable()
-                    .frame(width: 65, height: 65)
-            }
-            .offset(x: 0, y: -25)
-            .onTapGesture {
-                scanAction?()
-            }
-        }
+                }
+            )
     }
 }
 

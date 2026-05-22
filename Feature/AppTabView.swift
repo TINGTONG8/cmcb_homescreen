@@ -12,7 +12,6 @@ struct AppTabView: View {
 
     var body: some View {
         ZStack(alignment: .bottom) {
-
             Group {
                 switch selectedTab {
                 case 0: HomeScreen()
@@ -22,21 +21,24 @@ struct AppTabView: View {
                 default: HomeScreen()
                 }
             }
-            TabBarComponent(
-                items: [
-                    ItemModel(icon: "ic_cmcb",     title: "Account"),
-                    ItemModel(icon: "ic_benefits",  title: "Benefits"),
-                    ItemModel(icon: "",             title: ""),
-                    ItemModel(icon: "ic_withdraw",  title: "Withdraw"),
-                    ItemModel(icon: "ic_support",   title: "Support")
-                ],
-                selectedTab: $selectedTab,
-                scanAction: {
-                    Navigator.shared.push(to: AccountsScreen(title: "Scan QR")) 
-                }
-            )
-            .ignoresSafeArea(.all, edges: .bottom)
-            .frame(maxWidth: .infinity)
+            SafeAreaReader { insets, deviceType in
+                TabBarComponent(
+                    items: [
+                        ItemModel(icon: "ic_cmcb",     title: "Account"),
+                        ItemModel(icon: "ic_benefits",  title: "Benefits"),
+                        ItemModel(icon: "",             title: ""),
+                        ItemModel(icon: "ic_withdraw",  title: "Withdraw"),
+                        ItemModel(icon: "ic_support",   title: "Support")
+                    ],
+                    selectedTab: $selectedTab,
+                    scanAction: {
+                        Navigator.shared.push(to: AccountsScreen(title: "Scan QR"))
+                    }
+                )
+                .padding(.bottom, deviceType.extraBottomPadding)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                .ignoresSafeArea(.all, edges: .bottom)
+            }
         }
         .ignoresSafeArea()
     }
