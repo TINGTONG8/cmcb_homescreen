@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		764F1F1E2FBAA994001EA437 /* DeviceSafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */; };
+		7699CC112FBFFDA300CEA867 /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7699CC102FBFFDA200CEA867 /* AppTabView.swift */; };
+		7699CC142FC000A400CEA867 /* BenefitsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7699CC132FC0009900CEA867 /* BenefitsScreen.swift */; };
+		7699CC172FC000DB00CEA867 /* ScanQRScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7699CC162FC000D600CEA867 /* ScanQRScreen.swift */; };
+		7699CC1A2FC0012F00CEA867 /* WithdrawScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7699CC192FC0012900CEA867 /* WithdrawScreen.swift */; };
+		7699CC1D2FC0015800CEA867 /* SupportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7699CC1C2FC0015200CEA867 /* SupportScreen.swift */; };
 		76D90F0E2FBAEEDD0010C947 /* ProfileUserComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */; };
+		76D90F572FBC007C0010C947 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F562FBC00770010C947 /* Navigator.swift */; };
+		76D90F5A2FBC02890010C947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F592FBC02870010C947 /* AppDelegate.swift */; };
+		76D90F5D2FBC057A0010C947 /* BaseMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F5C2FBC05780010C947 /* BaseMain.swift */; };
+		76D90F722FBC57DF0010C947 /* AppBarComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F712FBC57C90010C947 /* AppBarComponent.swift */; };
+		76D90F752FBC5E560010C947 /* AccountsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D90F742FBC5E500010C947 /* AccountsScreen.swift */; };
 		E405B9062FB95A62003BEAA3 /* BankingServiceExtraChildComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */; };
 		E4C906B02FB803BA007BDF84 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906AF2FB803BA007BDF84 /* Color + Extension.swift */; };
-		E4C906B22FB80410007BDF84 /* homescreenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906B12FB80410007BDF84 /* homescreenApp.swift */; };
-		E4C906B42FB80423007BDF84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906B32FB80423007BDF84 /* ContentView.swift */; };
+		E4C906B42FB80423007BDF84 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906B32FB80423007BDF84 /* HomeScreen.swift */; };
 		E4C906B72FB80515007BDF84 /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4C906B62FB80515007BDF84 /* Asset.xcassets */; };
 		E4C906EF2FB82FA6007BDF84 /* UserAccountBannerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906EE2FB82F9E007BDF84 /* UserAccountBannerComponent.swift */; };
 		E4C906F12FB83518007BDF84 /* StatusComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C906F02FB8350E007BDF84 /* StatusComponent.swift */; };
@@ -44,14 +53,23 @@
 
 /* Begin PBXFileReference section */
 		764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSafeArea.swift; sourceTree = "<group>"; };
+		7699CC102FBFFDA200CEA867 /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		7699CC132FC0009900CEA867 /* BenefitsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenefitsScreen.swift; sourceTree = "<group>"; };
+		7699CC162FC000D600CEA867 /* ScanQRScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRScreen.swift; sourceTree = "<group>"; };
+		7699CC192FC0012900CEA867 /* WithdrawScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawScreen.swift; sourceTree = "<group>"; };
+		7699CC1C2FC0015200CEA867 /* SupportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportScreen.swift; sourceTree = "<group>"; };
 		76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUserComponent.swift; sourceTree = "<group>"; };
+		76D90F562FBC00770010C947 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		76D90F592FBC02870010C947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		76D90F5C2FBC05780010C947 /* BaseMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMain.swift; sourceTree = "<group>"; };
+		76D90F6E2FBC56590010C947 /* homescreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homescreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D90F6F2FBC56590010C947 /* homescreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homescreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D90F702FBC56590010C947 /* homescreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homescreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		76D90F712FBC57C90010C947 /* AppBarComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBarComponent.swift; sourceTree = "<group>"; };
+		76D90F742FBC5E500010C947 /* AccountsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsScreen.swift; sourceTree = "<group>"; };
 		E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingServiceExtraChildComponent.swift; sourceTree = "<group>"; };
-		E4C906792FB7F560007BDF84 /* homescreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homescreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4C906862FB7F562007BDF84 /* homescreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homescreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4C906902FB7F562007BDF84 /* homescreenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = homescreenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C906AF2FB803BA007BDF84 /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
-		E4C906B12FB80410007BDF84 /* homescreenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homescreenApp.swift; sourceTree = "<group>"; };
-		E4C906B32FB80423007BDF84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E4C906B32FB80423007BDF84 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		E4C906B62FB80515007BDF84 /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
 		E4C906EC2FB80704007BDF84 /* QuickBankingComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickBankingComponent.swift; sourceTree = "<group>"; };
 		E4C906EE2FB82F9E007BDF84 /* UserAccountBannerComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountBannerComponent.swift; sourceTree = "<group>"; };
@@ -89,36 +107,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7699CC122FC0008900CEA867 /* Benefits */ = {
+			isa = PBXGroup;
+			children = (
+				7699CC132FC0009900CEA867 /* BenefitsScreen.swift */,
+			);
+			path = Benefits;
+			sourceTree = "<group>";
+		};
+		7699CC152FC000C300CEA867 /* ScanQR */ = {
+			isa = PBXGroup;
+			children = (
+				7699CC162FC000D600CEA867 /* ScanQRScreen.swift */,
+			);
+			path = ScanQR;
+			sourceTree = "<group>";
+		};
+		7699CC182FC0012300CEA867 /* Withdraw */ = {
+			isa = PBXGroup;
+			children = (
+				7699CC192FC0012900CEA867 /* WithdrawScreen.swift */,
+			);
+			path = Withdraw;
+			sourceTree = "<group>";
+		};
+		7699CC1B2FC0014B00CEA867 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				7699CC1C2FC0015200CEA867 /* SupportScreen.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		76D90F532FBBFFB40010C947 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				7699CC1B2FC0014B00CEA867 /* Support */,
+				7699CC182FC0012300CEA867 /* Withdraw */,
+				7699CC152FC000C300CEA867 /* ScanQR */,
+				7699CC122FC0008900CEA867 /* Benefits */,
+				76D90F732FBC5E3E0010C947 /* Accounts */,
+				76D90F5B2FBC056D0010C947 /* HomeScreen */,
+				7699CC102FBFFDA200CEA867 /* AppTabView.swift */,
+				76D90F5C2FBC05780010C947 /* BaseMain.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		76D90F582FBC01630010C947 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				76D90F592FBC02870010C947 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		76D90F5B2FBC056D0010C947 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E4C906B32FB80423007BDF84 /* HomeScreen.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		76D90F5E2FBC163A0010C947 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E4C906EB2FB806C8007BDF84 /* Component */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		76D90F5F2FBC16750010C947 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4C906B52FB80430007BDF84 /* Icon */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		76D90F732FBC5E3E0010C947 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				76D90F742FBC5E500010C947 /* AccountsScreen.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
 		E4C906702FB7F560007BDF84 = {
 			isa = PBXGroup;
 			children = (
-				764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */,
+				76D90F582FBC01630010C947 /* App */,
+				76D90F532FBBFFB40010C947 /* Feature */,
+				76D90F5E2FBC163A0010C947 /* Utils */,
+				E4C906AE2FB803B0007BDF84 /* Extension */,
+				76D90F5F2FBC16750010C947 /* Resources */,
 				E4C906F72FB850A3007BDF84 /* Model */,
-				E4C906EB2FB806C8007BDF84 /* Component */,
-				E4C906B52FB80430007BDF84 /* Icon */,
-				E4C906AE2FB803B0007BDF84 /* Color */,
-				E4C906B32FB80423007BDF84 /* ContentView.swift */,
-				E4C906B12FB80410007BDF84 /* homescreenApp.swift */,
-				E4C9067A2FB7F560007BDF84 /* Products */,
+				764F1F1D2FBAA98C001EA437 /* DeviceSafeArea.swift */,
+				76D90F562FBC00770010C947 /* Navigator.swift */,
+				76D90F6E2FBC56590010C947 /* homescreen.app */,
+				76D90F6F2FBC56590010C947 /* homescreenTests.xctest */,
+				76D90F702FBC56590010C947 /* homescreenUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		E4C9067A2FB7F560007BDF84 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E4C906792FB7F560007BDF84 /* homescreen.app */,
-				E4C906862FB7F562007BDF84 /* homescreenTests.xctest */,
-				E4C906902FB7F562007BDF84 /* homescreenUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E4C906AE2FB803B0007BDF84 /* Color */ = {
+		E4C906AE2FB803B0007BDF84 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				E4C906AF2FB803BA007BDF84 /* Color + Extension.swift */,
 			);
-			path = Color;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		E4C906B52FB80430007BDF84 /* Icon */ = {
@@ -132,6 +230,7 @@
 		E4C906EB2FB806C8007BDF84 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				76D90F712FBC57C90010C947 /* AppBarComponent.swift */,
 				76D90F0D2FBAEED20010C947 /* ProfileUserComponent.swift */,
 				E405B9052FB95A5E003BEAA3 /* BankingServiceExtraChildComponent.swift */,
 				E4C911F22FB8C06400293195 /* FrequentlyUsedComponent.swift */,
@@ -173,7 +272,7 @@
 			packageProductDependencies = (
 			);
 			productName = homescreen;
-			productReference = E4C906792FB7F560007BDF84 /* homescreen.app */;
+			productReference = 76D90F6E2FBC56590010C947 /* homescreen.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E4C906852FB7F562007BDF84 /* homescreenTests */ = {
@@ -193,7 +292,7 @@
 			packageProductDependencies = (
 			);
 			productName = homescreenTests;
-			productReference = E4C906862FB7F562007BDF84 /* homescreenTests.xctest */;
+			productReference = 76D90F6F2FBC56590010C947 /* homescreenTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E4C9068F2FB7F562007BDF84 /* homescreenUITests */ = {
@@ -213,7 +312,7 @@
 			packageProductDependencies = (
 			);
 			productName = homescreenUITests;
-			productReference = E4C906902FB7F562007BDF84 /* homescreenUITests.xctest */;
+			productReference = 76D90F702FBC56590010C947 /* homescreenUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -250,7 +349,7 @@
 			mainGroup = E4C906702FB7F560007BDF84;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = E4C9067A2FB7F560007BDF84 /* Products */;
+			productRefGroup = E4C906702FB7F560007BDF84;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -292,19 +391,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C906F62FB83AB7007BDF84 /* BankingServiceChildComponent.swift in Sources */,
-				E4C906B22FB80410007BDF84 /* homescreenApp.swift in Sources */,
 				764F1F1E2FBAA994001EA437 /* DeviceSafeArea.swift in Sources */,
 				E4C906EF2FB82FA6007BDF84 /* UserAccountBannerComponent.swift in Sources */,
+				7699CC172FC000DB00CEA867 /* ScanQRScreen.swift in Sources */,
+				76D90F722FBC57DF0010C947 /* AppBarComponent.swift in Sources */,
 				E4C906F22FB8367F007BDF84 /* QuickBankingComponent.swift in Sources */,
+				7699CC1A2FC0012F00CEA867 /* WithdrawScreen.swift in Sources */,
+				76D90F572FBC007C0010C947 /* Navigator.swift in Sources */,
+				76D90F5D2FBC057A0010C947 /* BaseMain.swift in Sources */,
 				E4C906F92FB850DA007BDF84 /* ItemModel.swift in Sources */,
 				E4C906B02FB803BA007BDF84 /* Color + Extension.swift in Sources */,
 				E4C906F42FB83AA4007BDF84 /* BankingServiceComponent.swift in Sources */,
 				E4C906FD2FB85723007BDF84 /* TabBarChildComponent.swift in Sources */,
-				E4C906B42FB80423007BDF84 /* ContentView.swift in Sources */,
+				76D90F752FBC5E560010C947 /* AccountsScreen.swift in Sources */,
+				E4C906B42FB80423007BDF84 /* HomeScreen.swift in Sources */,
 				E4C911F32FB8C06B00293195 /* FrequentlyUsedComponent.swift in Sources */,
+				7699CC112FBFFDA300CEA867 /* AppTabView.swift in Sources */,
 				E405B9062FB95A62003BEAA3 /* BankingServiceExtraChildComponent.swift in Sources */,
 				E4C906F12FB83518007BDF84 /* StatusComponent.swift in Sources */,
+				7699CC1D2FC0015800CEA867 /* SupportScreen.swift in Sources */,
+				7699CC142FC000A400CEA867 /* BenefitsScreen.swift in Sources */,
 				76D90F0E2FBAEEDD0010C947 /* ProfileUserComponent.swift in Sources */,
+				76D90F5A2FBC02890010C947 /* AppDelegate.swift in Sources */,
 				E4C906FB2FB85628007BDF84 /* TabBarComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

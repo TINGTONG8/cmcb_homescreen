@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ItemModel: Identifiable {
-        let id = UUID()
-        var icon: String
-        var title: String
+    let id = UUID()
+    var icon: String
+    var title: String
+    var action: (() -> Void)? = nil
 }

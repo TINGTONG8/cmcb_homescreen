@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+@UIApplicationMain
 class AppDelegate: NSObject, UIApplicationDelegate {
     var window: UIWindow?
 
@@ -16,7 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
 
-        let rootView = homescreenApp()
+        let rootView = AppTabView()
         let hostingController = UIHostingController(rootView: rootView)
 
         let navigationController = UINavigationController(rootViewController: hostingController)
